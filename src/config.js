@@ -1,36 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+export const cloudinarybaseurl =
+  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
-//header
-const Title = () => (
-  <a href="/">
-    <img
-      className="logo"
-      src="https://github.com/parth-nexus/namastereact/blob/main/logo.png?raw=true"
-      alt="logo file villa"
-    ></img>
-  </a>
-);
-const Heading = () => {
-  return (
-    <div className="header">
-      <div>
-        <Title />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const data = [
+export const data = [
   {
     cardType: "restaurant",
     layoutAlignmentType: "VERTICAL",
@@ -1292,51 +1263,3 @@ const data = [
     parentWidget: false,
   },
 ];
-
-//body
-const RestaurantCard = ({
-  name,
-  cuisines,
-  avgRating,
-  slaString,
-  cloudinaryImageId,
-}) => {
-  return (
-    <div className="card">
-      <img
-        src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId}`}
-      ></img>
-      <h2>{name}</h2>
-      <h5>{cuisines.join(", ")}</h5>
-      <h5>{avgRating} stars</h5>
-      <h5>{slaString} ETA</h5>
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="restaurantList">
-      {data.map((ele, index) => {
-        return <RestaurantCard key={ele.data.data.id} {...ele.data.data} />;
-      })}
-    </div>
-  );
-};
-
-//footer
-const Footer = () => {
-  return <div className="footer">Footer</div>;
-};
-
-const AppLayout = () => {
-  return (
-    <>
-      <Heading />
-      <Body />
-      <Footer />
-    </>
-  );
-};
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);

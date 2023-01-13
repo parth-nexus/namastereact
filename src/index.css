@@ -1,16 +1,16 @@
 .nav-items > ul {
   list-style-type: none;
   display: flex;
+  margin: 0;
 }
 
 .nav-items > ul > li {
   padding: 10px;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
-  border: 1px solid black;
   padding: 10px;
 }
 
@@ -20,9 +20,14 @@
 
 .card {
   width: 200px;
-  border: 1px solid red;
   padding: 10px;
-  margin: 5px;
+  margin: 1px;
+  border: 1px solid #fff;
+}
+
+.card:hover {
+  border-color: #d3d5df;
+  box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
 }
 
 .card > img {
@@ -32,4 +37,10 @@
 .restaurantList {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+body {
+  margin-left: 15%;
+  margin-right: 15%;
 }
