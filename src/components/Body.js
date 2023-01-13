@@ -7,7 +7,7 @@ const Body = () => {
   const [restaurantList, setRestrau] = useState(data);
 
   const filterdata = () => {
-    if (searchTxt.trim().length === 0) {
+    if (searchTxt.trim().length === 0 || restaurantList.length < data.length) {
       setRestrau(data);
     } else {
       const fldr = restaurantList.filter((ele) =>
