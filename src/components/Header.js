@@ -3,7 +3,7 @@ const Title = () => (
   <a href="/">
     <img
       className="logo"
-      src="https://github.com/parth-nexus/namastereact/blob/main/logo.png?raw=true"
+      src="https://res.cloudinary.com/djlbcycb5/image/upload/v1673600563/logo_qbzllx.png"
       alt="logo file villa"
     ></img>
   </a>
